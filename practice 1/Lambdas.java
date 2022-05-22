@@ -3,7 +3,7 @@ import java.util.function.Supplier;
 import java.util.function.Consumer;
 import java.util.Scanner;
 
-public class Main {
+public class Lambdas {
 
     public static void main( String[] args ) {
 
