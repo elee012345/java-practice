@@ -1,19 +1,16 @@
-public class Threads extends Thread {
+import java.util.*;
+import java.io.*;
 
-    int num;
-
-    public ThreadPractice() {
-        num = 0;
-    }
+public class ThreadPractice implements Runnable {
 
     public static void main( String args[] ) {
-        ThreadPractice ThreadTest = new ThreadPractice();
-        ThreadTest.start();
+        Runnable RunnableInterface = new ThreadPractice();
+        Thread AThread = new Thread(RunnableInterface, "Thread 1");
+        AThread.start();
     }
 
     public void run() {
-        num++;
-        System.out.println(num);
+        System.out.println("Hi");
     }
 
 }   
