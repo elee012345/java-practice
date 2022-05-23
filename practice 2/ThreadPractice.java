@@ -2,12 +2,12 @@ public class Threads extends Thread {
 
     int num;
 
-    public Threads() {
+    public ThreadPractice() {
         num = 0;
     }
 
     public static void main( String args[] ) {
-        Threads ThreadTest = new Threads();
+        ThreadPractice ThreadTest = new ThreadPractice();
         ThreadTest.start();
     }
 
