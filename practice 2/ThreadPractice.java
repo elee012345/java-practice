@@ -14,3 +14,8 @@ public class ThreadPractice implements Runnable {
     }
 
 }   
+
+
+// hopefully helpful tutorials
+// https://www.youtube.com/watch?v=r_MbozD32eo
+// 
