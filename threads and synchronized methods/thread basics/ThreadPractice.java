@@ -1,6 +1,3 @@
-import java.util.*;
-import java.io.*;
-
 public class ThreadPractice implements Runnable {
 
     public static void main( String args[] ) {
