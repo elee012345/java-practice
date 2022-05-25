@@ -4,6 +4,9 @@ import java.io.*;
 public class ThreadPractice implements Runnable {
 
     public static void main( String args[] ) {
+        // the current thread that is running is our main thread
+        System.out.println("The current thread we're using is: " + Thread.currentThread().getName());
+
         // making a new runnable interface
         ThreadPractice runnable = new ThreadPractice();
         // creating two threads off of the ThreadPractice object runnable
