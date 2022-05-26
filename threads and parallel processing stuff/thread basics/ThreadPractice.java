@@ -11,6 +11,23 @@ public class ThreadPractice implements Runnable {
         Thread thread1 = new Thread(runnable, "Thread 1");
         Thread thread2 = new Thread(runnable, "Thread 2");
 
+        // another way to make a thread
+        Thread lambdaThreadExample = new Thread ( new Runnable() {
+            public void run() {
+                System.out.println("Hi");
+            }
+        } );
+        // no errors!
+        lambdaThreadExample.start();
+
+        // you can also make an anonymous class to do the same thing 
+        Runnable anotherRunnable = new Runnable() {
+            public void run() {
+                System.out.println("Hi");
+            }
+        };
+        // if you pass anotherRunnable into the Thread's constructure then it'll work the same way
+
         // displaying the thread names
         System.out.println("thread1's name is " + thread1.getName());
         System.out.println("thread2's name is " + thread2.getName());
