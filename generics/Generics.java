@@ -1,7 +1,12 @@
-public class Generics {
+public class Generics <T>{
 
-    public Generics() {
+    T var1;
+    public Generics( T inputVar1 ) {
+        this.var1 = inputVar1;
+    }
 
+    public String returnAsStringPlusHi () {
+        return var1.toString() + " Hi";
     }
     
     public static void main( String[] args ) {
@@ -32,6 +37,15 @@ public class Generics {
 
         /*** Generic classes ***/
 
+        // defining a generic class with type Double
+        Generics<Double> genericClass1 = new Generics<>(3.0);
+        // we are able to convert whatever we pass in into a string and then 
+        // check that it is in fact a string 
+        if ( genericClass1.returnAsStringPlusHi().getClass() == String.class ) {
+            System.out.println( genericClass1.returnAsStringPlusHi() );
+        } else {
+            System.out.println("It didn't work :(");
+        }
     }
 
 
