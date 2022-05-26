@@ -27,6 +27,10 @@ public class ThreadPractice implements Runnable {
         Runnable lambdaRunnable = () -> System.out.println("Hi");
         // if you pass anotherRunnable into the Thread's constructure then it'll work the same way
 
+        // yet another way of making a thread 
+        // this be good fast way
+        Thread lambdaThread = new Thread ( () -> System.out.println("Hi") );
+
         // displaying the thread names
         System.out.println("thread1's name is " + thread1.getName());
         System.out.println("thread2's name is " + thread2.getName());
@@ -133,3 +137,4 @@ public class ThreadPractice implements Runnable {
 // hopefully helpful tutorials
 // https://www.youtube.com/watch?v=r_MbozD32eo
 // 
+
