@@ -1,12 +1,14 @@
-public class Generics <T>{
+public class Generics <type1, type2>{
 
-    T var1;
-    public Generics( T inputVar1 ) {
+    type1 var1;
+    type2 var2;
+    public Generics( type1 inputVar1, type2 inputVar2 ) {
         this.var1 = inputVar1;
+        this.var2 = inputVar2;
     }
 
-    public String returnAsStringPlusHi () {
-        return var1.toString() + " Hi";
+    public String addTogetherAsString() {
+        return var1.toString() + var2.toString();
     }
     
     public static void main( String[] args ) {
@@ -37,12 +39,18 @@ public class Generics <T>{
 
         /*** Generic classes ***/
 
-        // defining a generic class with type Double
-        Generics<Double> genericClass1 = new Generics<>(3.0);
-        // we are able to convert whatever we pass in into a string and then 
-        // check that it is in fact a string 
-        if ( genericClass1.returnAsStringPlusHi().getClass() == String.class ) {
-            System.out.println( genericClass1.returnAsStringPlusHi() );
+        // defining a generic class with type Double and Integer being passed into it
+        Generics<Double, Integer> genericClass1 = new Generics<>(3.0, 2);
+
+        // normally if we were to add a double and an integer you would get a double
+        // if you were to add a string and something else you would get a string but that's 
+        // besides the point 
+        // we want to be able to add to numbers together as strings 
+        // we've done this in this generic class
+        // basically we are guarenteeing no matter what type of variable you pass in, 
+        // you will get a string back
+        if ( genericClass1.addTogetherAsString().getClass() == String.class ) {
+            System.out.println( genericClass1.addTogetherAsString() );
         } else {
             System.out.println("It didn't work :(");
         }
