@@ -1,7 +1,5 @@
-import java.util.stream.*;
-import java.util.Collection; 
+import java.util.stream.Collectors;
 import java.util.Arrays;
-import java.util.Integer;
 import java.util.List;
 public class Streams {
 
